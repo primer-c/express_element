@@ -1,0 +1,20 @@
+.banner video {
+  outline: none;
+  bottom: none;
+}
+/*main start*/
+main {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+main aside {
+  width: 200px;
+  border: 1px solid #f00;
+}
+main article {
+  background: #ff0;
+  width: 900px;
+  height: 400px;
+}
+/*main end*/

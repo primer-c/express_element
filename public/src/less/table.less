@@ -1,0 +1,48 @@
+main {
+  width: 100%;
+  padding: 40px 0;
+  background: purple;
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+    box-shadow: 0 0 20px rgab(10,180,250,0.2);
+    caption {
+      margin: 10px auto;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+    thead {
+      tr {
+        background: yellow;
+        th {
+          border: 1px solid #333;
+          padding: 4px 30px;
+          font-size: 14px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        background: #eee;
+        td {
+          border: 1px solid #333;
+          text-align: center;
+          // color: #fff;
+          &:nth-child(1){
+            width: 120px;
+            padding-left: 10px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  .link {
+    padding: 40px 65px 0 0;    
+    a {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../src/imgs/favicon.ico" />
+    <link rel="stylesheet" href="../src/css/common.css" />
+    <link rel="stylesheet" href="../src/css/login.css" />
+    <link rel="stylesheet" href="../src/css/font-awesome.min.css" />
+    <script src="../src/js/vue.js"></script>
+    <base href="http://localhost:5000">
+  </head>
+  <body>
+    <div id="app">
+      <!-- header start -->
+      <header>
+        <nav>
+          <div class="container">
+            <div class="logo">
+              <i class="fa fa-diamond" aria-hidden="true"></i>
+            </div>
+            <menu>
+              <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/login">Login</a></li>          
+              </ul>
+            </menu>
+          </div>
+        </nav>
+      </header>
+      <!-- header end -->
+      <!-- main start-->
+      <main>
+        <div class="container login-container">
+          <div :class="form">
+            <h3 v-if="isTrue">登录</h3>
+            <h3 v-if="!isTrue">注册</h3>
+            <form action="http://localhost:3000/login" method="post">
+              <ul>
+                <li class="username">
+                  <label for="username">Email</label>
+                  <input type="text" name="username" id="username">
+                </li>
+                <li class="password" v-if="!isTrue">
+                  <label for="password">Password</label>
+                  <input type="text" name="password" id="password">
+                </li>
+                <li class="confirm">
+                  <label for="confirm">Confirm</label>
+                  <input type="text" name="confirm" id="confirm">
+                </li>
+                <li>
+                  <a href="javascript:;">忘记密码？</a>
+                </li>
+                <li class="submit">
+                  <input type="submit" value="提交">
+                </li>
+                <li class="facebook">
+                  <button class="btn-facebook">
+                    使用<strong>FaceBook</strong>账号登陆
+                  </button>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div :class="control">
+            <div class="img">
+              <div v-if="!isTrue">
+                <h3>已有账号</h3>
+                <p>由账号就登录吧，好久不见啦！</p>
+              </div>
+              <div v-if="isTrue">
+                <h3>还未注册</h3>
+                <p>您需要先注册，才能登录！</p>
+              </div>
+              <button class="btn" @click="registerBtn" v-if="isTrue">注册</button>
+              <button class="btn" @click="loginBtn" v-if="!isTrue">登录</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- main end -->
+
+      <!-- footer start -->
+      <footer dir="rtl">
+        <div class="container">
+          <span>Nan Shan Programming Eduction Collage</span><span>&copy;</span>
+        </div>
+      </footer>
+      <!-- footer end -->
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            isTrue: true,
+            form: "form",
+            control: "control"
+          }
+        },
+        methods: {
+          loginBtn() {
+            this.isTrue = !this.isTrue;
+            this.form = "form";
+            this.control = "control";
+          },
+          registerBtn() {
+            this.isTrue = !this.isTrue;
+            this.form =  "form signup";
+            this.control =  "control login";
+          }
+        },
+      }
+     Vue.createApp(App).mount('#app')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+/*main start*/
+main {
+  margin: 6px;
+}
+main .container {
+  margin: 10px 0;
+  margin: 0 auto;
+  width: 1200px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+main .container .paint {
+  width: inherit;
+  overflow: hidden;
+}
+main .container .paint ul {
+  width: 7200px;
+  animation: slider 8s linear infinite alternate;
+}
+main .container .paint ul li {
+  float: left;
+  position: relative;
+}
+main .container .paint ul li .slider-content {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+main .container .paint ul li .slider-content h3 {
+  font-size: 18px;
+  color: orange;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main .container .paint ul li .slider-content p {
+  color: orange;
+}
+main .container .paint ul li img {
+  width: 1200px;
+  height: 440px;
+}
+main .container .content {
+  padding: 15px;
+}
+main .container .content h4 {
+  font-family: helvetica, sans-serif;
+  font-size: 18px;
+}
+main .container .content .date span {
+  color: #f00;
+}
+main .container .content .refrence {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main .container .content .refrence a {
+  font-size: 13px;
+  color: #00f;
+}
+/*defined animation*/
+@keyframes slider {
+  0% {
+    transform: translateX(0px);
+  }
+  9% {
+    transform: translateX(0px);
+  }
+  18% {
+    transform: translateX(-1200px);
+  }
+  27% {
+    transform: translateX(-1200px);
+  }
+  36% {
+    transform: translateX(-2400px);
+  }
+  45% {
+    transform: translateX(-2400px);
+  }
+  54% {
+    transform: translateX(-3600px);
+  }
+  63% {
+    transform: translateX(-3600px);
+  }
+  72% {
+    transform: translateX(-4800px);
+  }
+  81% {
+    transform: translateX(-4800px);
+  }
+  90% {
+    transform: translateX(-6000px);
+  }
+  100% {
+    transform: translateX(-6000px);
+  }
+}

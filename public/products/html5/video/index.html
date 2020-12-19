@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videos</title>
+    <link rel="stylesheet" href="../../../src/imgs/favicon.ico" />
+    <link rel="stylesheet" href="../../../src/css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="../../../src/css/font-awesome.min.css" />
+    <script src="../../../src/js/vue.js"></script>
+    <base href="http://localhost:5000">
+  </head>
+  <body>
+    <div id="app">
+      <!-- header start -->
+      <header>
+        <nav>
+          <div class="container">
+            <div class="logo">
+              <i class="fa fa-diamond" aria-hidden="true"></i>
+            </div>
+            <menu>
+              <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/login">Login</a></li>          
+              </ul>
+            </menu>
+          </div>
+        </nav>
+        <div class="banner">
+          <div class="container">
+            <video src="../../src/imgs/moving.mp4" autoplay loop controls></video>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+      <!-- main start-->
+      <main>
+        <div class="container">
+          <div class="video">
+            <div class="video-container">
+            <video src="../../src/imgs/Andrea Bocelli,Ed Sheeran - Perfect Symphony.mp4" autoplay loop controls></video>
+            </div>
+            <div class="content">
+              <h4></h4>
+              <div class="date"><span>date:&nbsp;&nbsp;</span><em>2020-10-20</em></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rerum
+                sit iure architecto.
+              </p>
+              <div dir="rtl" class="refrence">
+                <span>Reference:&nbsp;&nbsp</span
+                ><a :href="item.link">HTML5</a>
+              </div>
+            </div> 
+          </div>
+          <div class="video" v-for="item in videos">
+            <div class="video-container">
+              <video :src="item.video" loop controls></video>
+            </div>
+            <div class="content">
+              <h4>{{item.title}}</h4>
+              <div class="date"><span>date:&nbsp;&nbsp;</span><em>2020-10-20</em></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rerum
+                sit iure architecto.
+              </p>
+              <div dir="rtl" class="refrence">
+                <span>Reference:&nbsp;&nbsp</span
+                ><a :href="item.link">HTML5</a>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </main>
+      <!-- main end -->
+
+      <!-- footer start -->
+      <footer dir="rtl">
+        <div class="container">
+          <span>Nan Shan Programming Eduction Collage</span><span>&copy;</span>
+        </div>
+      </footer>
+      <!-- footer end -->
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            videos: [
+              {
+                id: 1,
+                title: "Amo Soltanto Te",
+                video: "../../src/imgs/Andrea Bocelli,Ed Sheeran - Amo Soltanto Te.mp4",
+                link: "products/html5"
+              },
+              {
+                id: 2,
+                title: "Half a world away",
+                video: "../../src/imgs/Half a world away _Jan Werner.mp4",
+                link: "products/html5"
+              },
+              {
+                id: 3,
+                title: "Now We Are Free",
+                video: "../../src/imgs/Andrea Bocelli - Nelle tue mani (Now We Are Free).mp4",
+                link: "products/html5"
+              },
+              {
+                id: 4,
+                title: "Elton John",
+                video: "../../src/imgs/Elton John.mp4",
+                link: "products/html5"
+              },
+              {
+                id: 5,
+                title: "Elton John",
+                video: "../../src/imgs/Elton John.mp4",
+                link: "products/html5"
+              }
+            ],
+          }
+        }
+      }
+     Vue.createApp(App).mount('#app')
+    </script>
+    <script>
+      
+    </script>
+  </body>
+</html>

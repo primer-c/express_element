@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-center {
+  display: flex;
+  justify-self: center;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+video {
+  outline: none;
+  border: none;
+  width: 1200px;
+}
+#app {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /*header start*/
+  /*main start*/
+  /* main end */
+  /* footer start */
+  /* footer end */
+}
+#app header {
+  /*nav start*/
+  /*nav end*/
+  /*header end*/
+}
+#app header nav {
+  width: 100vw;
+  float: left;
+  background: #222;
+  display: flex;
+  justify-self: center;
+}
+#app header nav .container {
+  height: 35px;
+  line-height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+#app header nav .container .logo i {
+  color: orange;
+}
+#app header nav .container menu {
+  height: inherit;
+}
+#app header nav .container menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+#app header nav .container menu ul li {
+  border-radius: 4px;
+  height: 35px;
+}
+#app header nav .container menu ul li a {
+  padding: 0 20px;
+}
+#app header nav .container menu ul li:hover {
+  background: orange;
+}
+#app header nav .container menu ul li:hover a {
+  color: #fff;
+}
+#app header nav .container menu ul li:hover ~ :nth-last-child(1) {
+  background: #222;
+}
+#app header nav .container menu ul li:hover ~ :nth-last-child(1) a {
+  color: #ccc;
+}
+#app header nav .container menu ul li:nth-last-child(1) {
+  background: orange;
+}
+#app header nav .container menu ul li:nth-last-child(1) a {
+  color: #fff;
+}
+#app header .banner .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+#app main {
+  flex: 1;
+}
+#app main .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+#app footer {
+  background: #222;
+  width: 100vw;
+}
+#app footer .container {
+  height: 40px;
+  line-height: 40px;
+  color: #ccc;
+  font-size: 14px;
+}

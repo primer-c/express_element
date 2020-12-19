@@ -1,0 +1,134 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.front {
+  transform: translateZ(54px);
+}
+.front li {
+  background: #f00;
+}
+.back {
+  transform: translateZ(-54px);
+}
+.back li {
+  background: #ff0;
+}
+.left {
+  transform: rotateY(90deg) translateZ(54px);
+}
+.left li {
+  background: #0f0;
+}
+.right {
+  transform: rotateY(-90deg) translateZ(54px);
+}
+.right li {
+  background: #0ff;
+}
+.top {
+  transform: rotateX(90deg) translateZ(54px);
+}
+.top li {
+  background: #00f;
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(54px);
+}
+.bottom li {
+  background: #f0f;
+}
+/* 定义动画 */
+@keyframes rotate {
+  0% {
+    transform: translateY(-100px) rotateX(-180deg) translateZ(10px);
+  }
+  20% {
+    transform: rotateY(-30deg) translateX(600px) rotateZ(20deg);
+  }
+  40% {
+    transform: translateY(300px) rotateX(-40deg) rotateZ(-20deg);
+  }
+  60% {
+    transform: rotateY(-145deg) translateX(-1000px) translateZ(-200px);
+  }
+  80% {
+    transform: translateY(300px) rotateX(270deg) rotateZ(-20deg);
+  }
+  100% {
+    transform: rotateY(285deg) translateX(1000px) rotateZ(30deg);
+  }
+}
+/*main start*/
+main {
+  margin: 6px;
+}
+main .container {
+  margin: 10px 0;
+  margin: 0 auto;
+  width: 1200px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+main .container .paint {
+  width: inherit;
+  height: 500px;
+  background: #000;
+  position: relative;
+}
+main .container .paint .box {
+  transform-style: preserve-3d;
+  perspective: 10000px;
+  position: absolute;
+  animation: rotate 10s linear infinite alternate;
+  left: 200px;
+  top: 200px;
+}
+main .container .paint .box ul {
+  width: 108px;
+  height: 108px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: transparent;
+}
+main .container .paint .box ul li {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 3px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+}
+main .container .content {
+  padding: 10px;
+}
+main .container .content h4 {
+  line-height: 16px;
+  font-size: 14px;
+}
+main .container .content .date span {
+  color: #f00;
+}
+main .container .content .date em {
+  font-size: 13px;
+}
+main .container .content p {
+  margin: 6px auto;
+}
+main .container .content .refrence {
+  font-size: 14px;
+}
+main .container .content .refrence a {
+  font-size: 13px;
+  color: #00f;
+  text-decoration: #00f;
+}
+/*main end*/

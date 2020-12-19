@@ -1,0 +1,202 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+@keyframes earth {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes mars {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 50%;
+  }
+}
+.planet {
+  width: 600px;
+  height: 460px;
+  background: #190703;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.planet h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+/*main start*/
+main {
+  margin: 6px;
+}
+main .container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  /*earth start*/
+  /* mars end*/
+}
+main .container .planetEarth {
+  position: relative;
+  min-width: 50%;
+  height: inherit;
+  background: #182357;
+  /* earth end*/
+  /*mars start*/
+}
+main .container .planetEarth .loader {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: animate 4s linear infinite;
+}
+main .container .planetEarth .loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
+  background-size: 200px 360px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+main .container .planetEarth .loader:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background: #00fff9;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00fff9, 0 0 20px #00fff9, 0 0 30px #00fff9, 0 0 40px #00fff9, 0 0 50px #00fff9, 0 0 60px #00fff9, 0 0 70px #00fff9, 0 0 80px #00fff9, 0 0 90px #00fff9, 0 0 100px #00fff9;
+}
+main .container .planetEarth .loader span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background: #182357;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #182357, 0 0 40px #182357, 0 0 60px #182357;
+}
+main .container .planetEarth .earth {
+  position: absolute;
+  left: 170px;
+  top: 140px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: url(../imgs/earth.png);
+  box-shadow: inset 0 0 20px #03a9f4, 0 0 120px #03a9f4;
+  animation: earth 40s linear infinite;
+}
+main .container .planetEarth .planetMars {
+  position: relative;
+  min-width: 50%;
+  height: inherit;
+  background: #190703;
+}
+main .container .planetEarth .planetMars .loader {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+}
+main .container .planetEarth .planetMars .loader:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgba(255, 87, 54, 0.4));
+  background-size: 200px 360px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+main .container .planetEarth .planetMars .loader:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background: #ff5722;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff5722, 0 0 20px #ff5722, 0 0 30px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 60px #ff5722, 0 0 70px #ff5722, 0 0 80px #ff5722, 0 0 90px #ff5722, 0 0 100px #ff5722;
+}
+main .container .planetEarth .planetMars .loader span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background: #190703;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #190703, 0 0 40px #190703, 0 0 60px #190703;
+}
+main .container .mars {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: url(../imgs/mars.jpg);
+  box-shadow: inset 0 0 20px #ff5722, 0 0 120px #ff5722;
+  animation: mars 40s linear infinite;
+}
+main .container .content {
+  padding: 10px;
+}
+main .container .content h4 {
+  line-height: 16px;
+  font-size: 14px;
+}
+main .container .content .date span {
+  color: #f00;
+}
+main .container .content .date em {
+  font-size: 13px;
+}
+main .container .content p {
+  margin: 6px auto;
+}
+main .container .content .refrence {
+  font-size: 14px;
+}
+main .container .content .refrence a {
+  font-size: 13px;
+  color: #00f;
+  text-decoration: #00f;
+}
+/*main end*/

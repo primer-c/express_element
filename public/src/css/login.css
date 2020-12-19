@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.before-after {
+  content: "";
+  display: inline-block;
+}
+input {
+  border: none;
+  outline: none;
+}
+a {
+  color: #888;
+  font-size: 13px;
+}
+.login-container {
+  margin: 10px auto;
+}
+#app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app .login-container {
+  width: 1200px;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(88, 54, 54, 0.4);
+}
+#app .login-container .form {
+  width: 800px;
+  height: inherit;
+  position: absolute;
+  background: #fff;
+  transition: transform 0.6s ease-in-out;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px auto;
+}
+#app .login-container .form h3 {
+  height: 100px;
+  line-height: 100px;
+}
+#app .login-container .form form {
+  flex: 1;
+  width: 800px;
+}
+#app .login-container .form form ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#app .login-container .form form ul li {
+  width: inherit;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+}
+#app .login-container .form form ul li input {
+  width: 500px;
+  border-bottom: 1px solid #888;
+}
+#app .login-container .form form ul li label {
+  width: 60px;
+  display: inline-block;
+}
+#app .login-container .form form ul li input[type=submit] {
+  width: 500px;
+  height: 40px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 16px;
+  border: none;
+  background: #d4af7a;
+}
+#app .login-container .form form ul li .btn-facebook {
+  border: none;
+  width: 500px;
+  height: 40px;
+  background: #fff;
+  border: 2px solid #aaa;
+  border-radius: 30px;
+}
+#app .login-container .signup {
+  transform: translateX(400px);
+}
+#app .login-container .control {
+  width: 1200px;
+  height: inherit;
+  position: absolute;
+  left: 800px;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+#app .login-container .control .img {
+  width: 400px;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#app .login-container .control .img:before {
+  content: "";
+  width: 1200px;
+  height: inherit;
+  position: absolute;
+  right: 0;
+  z-index: -5;
+  background: url(../imgs/background.jpeg) no-repeat center;
+  background-size: cover;
+}
+#app .login-container .control .img:after {
+  content: "";
+  width: 400px;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -4;
+}
+#app .login-container .control .img div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#app .login-container .control .img div h3 {
+  z-index: 1;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+}
+#app .login-container .control .img div p {
+  color: #fff;
+}
+#app .login-container .control .img .btn {
+  width: 100px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  color: #fff;
+}
+#app .login-container .control .img .btn:before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+#app .login-container .login {
+  transform: translateX(-800px);
+}
+#app .login-container .login .img:before {
+  left: 0px;
+}

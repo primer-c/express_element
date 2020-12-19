@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="../../../src/imgs/favicon.ico" />
+    <link rel="stylesheet" href="../../../src/css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="../../../src/css/font-awesome.min.css" />
+    <script src="../../../src/js/vue.js"></script>
+    <base href="http://localhost:5000">
+  </head>
+  <body>
+    <div id="app">
+      <!-- header start -->
+      <header>
+        <nav>
+          <div class="container">
+            <div class="logo">
+              <i class="fa fa-diamond" aria-hidden="true"></i>
+            </div>
+            <menu>
+              <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/login">Login</a></li>          
+              </ul>
+            </menu>
+          </div>
+        </nav>
+        <div class="banner container">
+         <!-- <video src="../../src/imgs/moving.mp4" autoplay loop controls></video> -->
+        </div>
+      </header>
+      <!-- header end -->
+      <!-- main start-->
+      <main>
+        <div class="container">
+          <!-- box start -->
+          <div class="paint slider">
+            <ul>
+              <li v-for="item in sliders">
+                <div class="slider-content">
+                  <h3>{{item.title}}</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rerum
+                  sit iure architecto.</p>
+                </div>
+                <img :src="item.img" alt="">
+              </li>
+            </ul>
+          </div>
+          <!-- box end -->
+
+          <!-- content start -->
+          <div class="content">
+            <h4>Slider</h4>
+            <div class="date"><span>date:&nbsp;&nbsp;</span><em>2020-10-20</em></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rerum
+              sit iure architecto.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rerum
+              sit iure architecto.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rerum
+              sit iure architecto.
+            </p>
+            <div dir="rtl" class="refrence">
+              <span>Reference:&nbsp;&nbsp</span>
+              <a href="products/css3">CSS3</a>
+            </div>
+          </div> 
+          <!-- content end -->
+        </div>
+      </main>
+      <!-- main end -->
+
+      <!-- footer start -->
+      <footer dir="rtl">
+        <div class="container">
+          <span>Nan Shan Programming Eduction Collage</span><span>&copy;</span>
+        </div>
+      </footer>
+      <!-- footer end -->
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            sliders: [
+              {
+                  id: 1,
+                  title: "HTML5 New Elements",
+                  img: "src/imgs/timg1.jpg",
+                },
+                {
+                  id: 2,
+                  title: "CSS3",
+                  img: "src/imgs/timg2.jpg",
+                },
+                {
+                  id: 3,
+                  title: "JavaScript",
+                  img: "src/imgs/timg3.jpg",
+                },
+                {
+                  id: 4,
+                  title: "JavaScript DOM",
+                  img: "src/imgs/timg4.jpg",
+                },
+                {
+                  id: 5,
+                  title: "JavaScript BOM",
+                  img: "src/imgs/timg5.jpg",
+                },
+                {
+                  id: 6,
+                  title: "JavaScript Vue",
+                  img: "src/imgs/timg6.jpg",
+                },
+              ]
+          }
+        }
+      }
+     Vue.createApp(App).mount('#app')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+/*banner start*/
+.banner {
+  margin: 0 auto;
+  overflow: hidden;
+}
+/*banner end*/
+/*main start*/
+main {
+  margin: 6px;
+}
+main .container {
+  margin: 10px 0;
+  margin: 0 auto;
+  width: 1200px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+main .container .paint {
+  width: inherit;
+  height: 500px;
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+}
+main .container .paint .wave {
+  width: 50%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #000;
+}
+main .container .paint .wave span {
+  position: absolute;
+  border-radius: 50%;
+  animation: wave 5s linear infinite;
+  animation-delay: calc(0.5s*var(--i));
+  background: rgba(255, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+main .container .paint .wave span:nth-of-type(1) {
+  --i: 1;
+}
+main .container .paint .wave span:nth-of-type(2) {
+  --i: 2;
+}
+main .container .paint .wave span:nth-of-type(3) {
+  --i: 3;
+}
+main .container .paint .wave span:nth-of-type(4) {
+  --i: 4;
+}
+main .container .paint .wave span:nth-of-type(5) {
+  --i: 5;
+}
+main .container .paint .wave span:nth-of-type(6) {
+  --i: 6;
+}
+main .container .paint .wave span:nth-of-type(7) {
+  --i: 7;
+}
+main .container .paint .wave span:nth-of-type(8) {
+  --i: 8;
+}
+main .container .paint .wave span:nth-of-type(9) {
+  --i: 9;
+}
+main .container .paint .wave span:nth-of-type(10) {
+  --i: 10;
+}
+main .container .paint .wave:nth-of-type(2) span {
+  background: rgba(0, 0, 255, 0.25);
+  border: 1px solid #fff;
+}
+main .container .content {
+  padding: 10px;
+}
+main .container .content h4 {
+  line-height: 16px;
+  font-size: 14px;
+}
+main .container .content .date span {
+  color: #f00;
+}
+main .container .content .date em {
+  font-size: 13px;
+}
+main .container .content p {
+  margin: 6px auto;
+}
+main .container .content .refrence {
+  font-size: 14px;
+}
+main .container .content .refrence a {
+  font-size: 13px;
+  color: #00f;
+  text-decoration: #00f;
+}
+@keyframes wave {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+/*main end*/
